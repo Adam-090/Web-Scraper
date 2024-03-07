@@ -7,7 +7,7 @@ type=""
 
 
 typearg = sys.argv[2:]
-
+# This is the part of the code that takes in command line arguments.
 for arg in typearg:
     if arg == "-m":
         mode = "normal"
@@ -47,14 +47,16 @@ elif type == "culture":
     Url = baseUrl + "/culture"
 elif type == "earth":
     Url = baseUrl + "/future-planet"
-
+# Webscraping Code
 webPage = requests.get(Url)
-#print(webPage.text)
+#bs4 object
 soup = BeautifulSoup(webPage.content,"html.parser")
-#print(soup.find('h2').text)
+#fucnction for scraping
 def normalScrape():
+    #finds all the h2 tags
     h2tags=soup.find_all('h2')
-  
+
+  #loops through the list and prints out the new titles
     for title in h2tags:
 
         print(title.text)
