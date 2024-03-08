@@ -6,3 +6,9 @@ Command Line Arguments
 -b = news about buisness
 -c news about culture
 -e news about earth
+
+Example arguments
+python3 '# Webscraper.py 
+
+python3 '# Webscraper.py -m -t
+
